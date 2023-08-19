@@ -1,6 +1,9 @@
 package aula04.src.views;
 
+import java.sql.Connection;
+
 import aula04.src.application.controllers.FuncionarioController;
+import aula04.src.infra.databases.MysqlConnection;
 
 public class AppConsole {
     public static void main (String[] args){
@@ -40,6 +43,9 @@ public class AppConsole {
 
         //System.out.println(arr[0]); //henrique
         //System.out.println(arr2[0]); //henrique
+
+        Connection conexao = new MysqlConnection().getConnection();
+        System.out.println("Conexao bem sucedida" + conexao);
 
     }
 }
