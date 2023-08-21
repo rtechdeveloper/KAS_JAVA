@@ -2,7 +2,7 @@ package aula01;
 
 public class OlaMundo{
     public static void main (String[] args){
-        //teste
+        
         // TIPOS PRIMITIVOS
         byte um = 123; // 8bits
         Short dois = 1234; 

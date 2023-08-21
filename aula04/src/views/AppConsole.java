@@ -2,8 +2,9 @@ package aula04.src.views;
 
 import java.sql.Connection;
 
+
 import aula04.src.application.controllers.FuncionarioController;
-import aula04.src.infra.databases.MysqlConnection;
+import aula04.src.infra.databases.ConnectionMysql;
 
 public class AppConsole {
     public static void main (String[] args){
@@ -11,7 +12,7 @@ public class AppConsole {
         var funcionario1 = new FuncionarioController();
         
         funcionario1.cadastraFuncionario(
-            "Julio", "Instrutor", 200.00, true);
+           "Julio", "Instrutor", 200.00, true);
 
         System.out.print(funcionario1.mostraSalario());
 
@@ -44,8 +45,12 @@ public class AppConsole {
         //System.out.println(arr[0]); //henrique
         //System.out.println(arr2[0]); //henrique
 
-        Connection conexao = new MysqlConnection().getConnection();
-        System.out.println("Conexao bem sucedida" + conexao);
+        //var conexao = new ConnectionMysql().getConnection();
+
+        //System.out.println(conexao);
+
+        //System.out.println(w + "-" + x + "-" + z);
+
 
     }
 }
